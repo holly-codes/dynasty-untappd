@@ -1,14 +1,15 @@
 import React from 'react';
+import Filters from './Filters';
 import styles from '../styles/Header.module.scss';
 
-const Header = () => {
+const Header = ({currentFilter, setCurrentFilter}) => {
     return(
         <header className={styles.header}>
-            <img src="get-blessed.png" alt="get blessed"/>
             <div className={styles.headingsContainer}>
+                <img src="get-blessed.png" alt="get blessed"/>
                 <h1>DyNasty Untappd 2022</h1>
-                <h2>Get Blessed</h2>
             </div>
+            <Filters currentFilter={currentFilter} filterChange={setCurrentFilter}/>
         </header>
     )
 }

@@ -3,14 +3,12 @@ import styles from '../styles/Filters.module.scss';
 
 const Filters = ({currentFilter, setCurrentFilter}) => {
     return (
-        <>
-            <select className={styles.filter} onChange={setCurrentFilter} value={currentFilter}>
-                <option key="uniqueBeers" value="uniqueBeers">Unique Beer Checkins</option>
-                <option key="badges" value="badges">Badges</option>
-                <option key="bestDrinkingBuddy" value="drinkingBuddy">Best Drinking Buddy</option>
-                <option key="worstBeer" value="worstBeer">Worst Beer</option>
-            </select>
-        </>
+        <div className={styles.filterContainer}>
+            <button className={currentFilter === "uniqueBeers" ? "active" : ""} value="uniqueBeers" onClick={setCurrentFilter}>Unique Beers</button>
+            <button className={currentFilter === "badges" ? "active" : ""} value="badges" onClick={setCurrentFilter}>Badges</button>
+            <button className={currentFilter === "bestDrinkingBuddy" ? "active" : ""} value="bestDrinkingBuddy" onClick={setCurrentFilter}>Best Drinking Buddy</button>
+            <button className={currentFilter === "worstBeer" ? "active" : ""} value="worstBeer" onClick={setCurrentFilter}>Worst Beer</button>
+        </div>
     )
 }
 

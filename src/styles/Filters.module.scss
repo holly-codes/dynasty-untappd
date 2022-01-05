@@ -1,6 +1,50 @@
 @import "./variables.scss";
 
-.filter {
-  height: 25px;
-  margin: 25px;
+.filterContainer {
+  margin-left: 25px;
+
+  button {
+    height: 25px;
+    margin: 25px 12.5px 12.5px 25px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    background-color: white;
+
+    &:first-of-type {
+      margin: 25px 12.5px 25px 25px;
+
+      &:hover,
+      &:focus,
+      &.active {
+        background-color: $bright-yellow;
+      }
+    }
+
+    &:nth-of-type(2) {
+      &:hover,
+      &:focus,
+      &.active {
+        background-color: $hot-pink;
+      }
+    }
+
+    &:nth-of-type(3) {
+      &:hover,
+      &:focus,
+      &.active {
+        background-color: $light-blue;
+      }
+    }
+
+    &:last-of-type {
+      margin: 25px 25px 12.5px 25px;
+
+      &:hover,
+      &:focus,
+      &.active {
+        background-color: $dark-blue;
+      }
+    }
+  }
 }
