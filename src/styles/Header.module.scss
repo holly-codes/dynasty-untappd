@@ -1,0 +1,32 @@
+@import "./variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Licorice&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+
+.headingsContainer {
+  align-content: center;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  h2 {
+    font-family: "Licorice", cursive;
+    font-size: 20px;
+    margin-top: 0;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  max-height: 15%;
+  background-color: $light-grey;
+  align-items: center;
+
+  img {
+    max-height: 50px;
+    max-width: 50px;
+  }
+}
